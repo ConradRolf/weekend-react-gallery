@@ -22,4 +22,11 @@ img{
 
 .image{
   display: inline-block;
+  margin: 20px;
+}
+
+p{
+  height: 100px;
+  width: 100px;
+  text-overflow:initial;
 }
