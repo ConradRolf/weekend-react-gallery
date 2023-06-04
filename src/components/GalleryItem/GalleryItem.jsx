@@ -30,7 +30,7 @@ function GalleryItem (props) {
     return (
         <div className="image" key={image.id}>
                 <div onClick={() => setViewPoint(!viewPoint)}>{viewPoint ? <img src={image.path}/> : <p>{image.description}</p>}</div>
-                <div><button onClick={likeImage}>👍</button> Likes: {image.likes}</div>
+                <div className="buttonThing"><button onClick={likeImage}>👍</button> Likes: {image.likes}</div>
             </div>
     )
 }

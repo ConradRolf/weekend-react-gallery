@@ -13,6 +13,10 @@
   font-size: 1.5em;
 }
 
+body{
+  background-color: black;
+}
+
 img{
   height: 100px;
   width: 100px;
@@ -23,6 +27,9 @@ img{
 .image{
   display: inline-block;
   margin: 20px;
+  background-color: rgb(173, 195, 217);
+  border: 2px solid black;
+  border-radius: 24px;
 }
 
 p{
@@ -31,6 +38,17 @@ p{
   text-overflow:initial;
   border: 2px solid black;
   border-radius: 20px;
-  text-align: center, justify;
+  text-align: center;
   margin: auto;
+  padding-top: 5px;
+}
+
+button{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.buttonThing{
+  padding-bottom: 3px;
 }
