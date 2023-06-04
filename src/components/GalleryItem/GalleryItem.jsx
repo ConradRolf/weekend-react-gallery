@@ -3,11 +3,14 @@ import axios from 'axios';
 
 function GalleryItem (props) {
 
-    const [viewPoint, setViewPoint] = useState(true)   
+    const [viewPoint, setViewPoint] = useState(true)  
+    
+    let getImages = props.getImages
 
     let image = props.image
 
-    const likeImage = (id) => {
+    const likeImage = () => {
+        let id = image.id
         axios.put(`/gallery/like/${id}`)
         .then(response => {
             getImages()
@@ -22,7 +25,7 @@ function GalleryItem (props) {
     return (
         <div className="image" key={image.id}>
                 <div onClick={() => setViewPoint(!viewPoint)}>{viewPoint ? <img src={image.path}/> : <p>{image.description}</p>}</div>
-                <p><button onClick={likeImage}>👍</button> Likes: {image.likes}</p>
+                <div><button onClick={likeImage}>👍</button> Likes: {image.likes}</div>
             </div>
     )
 }
